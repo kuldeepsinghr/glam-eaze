@@ -1,0 +1,26 @@
+pre-commit:
+  parallel: true
+  commands:
+    prettier-format:
+      run: npx prettier --write {staged_files}
+      glob: '*.{js,ts,cjs,mjs,jsx,tsx,json,css,scss,md}'
+    biome-format-check:
+      run: npx @biomejs/biome format {staged_files}
+      glob: '*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}'
+
+pre-push:
+  commands:
+    protect_main_branch:
+      run: |
+        #!/bin/bash
+        current_branch=$(git rev-parse --abbrev-ref HEAD)
+        protected_branches=("main" "master")
+
+        for protected_branch in "${protected_branches[@]}"; do
+          if [[ "$current_branch" == "$protected_branch" ]]; then
+            echo "🚫 Direct push to '$protected_branch' is not allowed."
+            echo "   Please create a branch and submit a pull request."
+            exit 1
+          fi
+        done
+        echo "✅ Allowing push from branch '$current_branch'."
