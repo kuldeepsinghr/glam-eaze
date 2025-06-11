@@ -1,0 +1,27 @@
+export const menuList = [
+  {
+    id: 1,
+    name: 'Home',
+    path: '/',
+  },
+  {
+    id: 2,
+    name: 'Why Choose Us',
+    path: '/',
+  },
+  {
+    id: 3,
+    name: 'Our Services',
+    path: '/',
+  },
+  {
+    id: 4,
+    name: 'How It Works',
+    path: '/',
+  },
+  {
+    id: 5,
+    name: 'About Us',
+    path: '/',
+  },
+];
