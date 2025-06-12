@@ -15,7 +15,7 @@ export const Header = () => {
 
   return (
     <>
-      <header className="flex py-6 justify-between md:w-full items-center bg-primary md:bg-transparent md:text-secondary text-white rounded-b-4xl px-4 md:px-0 md:py-0">
+      <header className="flex py-6 justify-between lg:bg-background md:w-full items-center bg-primary md:bg-transparent md:text-secondary text-white rounded-b-4xl lg:rounded-none px-4 md:px-0 md:py-0">
         <div className="md:px-4">GlamEaze</div>
         <div className="flex gap-3 md:bg-primary md:gap-10 md:px-5 md:py-7 md:w-[80%] md:items-center md:justify-end md:text-white md:rounded-bl-[80px]">
           <div className="hidden lg:flex md:gap-10">

@@ -3,7 +3,7 @@ import './globals.css';
 import { Header } from './_components/Header';
 
 const inter = Inter({
-  weight: '400',
+  weight: ['400', '500', '600', '700', '800'],
   subsets: ['latin'],
   variable: '--font-inter',
 });

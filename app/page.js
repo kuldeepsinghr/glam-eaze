@@ -5,7 +5,8 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Strip />
+      {/* <Strip /> */}
+      <section>Hello</section>
     </>
   );
 }
