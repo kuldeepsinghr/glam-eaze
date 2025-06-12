@@ -45,3 +45,26 @@ export const services = [
     image: '/Mehandi.png',
   },
 ];
+
+export const chooseUs = [
+  {
+    name: 'Hygienic & Safe',
+    image: '/Hygienic.png',
+  },
+  {
+    name: 'Experienced Artist',
+    image: '/Experienced.png',
+  },
+  {
+    name: 'We Bring Everything',
+    image: '/WeBring.png',
+  },
+  {
+    name: 'Transparent Pricing',
+    image: '/Transparent.png',
+  },
+  {
+    name: 'Flexible Slots',
+    image: '/FlexibleSlots.png',
+  },
+];
