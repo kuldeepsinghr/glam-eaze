@@ -18,7 +18,7 @@ export const Header = () => {
       <header className="flex py-6 justify-between md:w-full items-center bg-primary md:bg-transparent md:text-secondary text-white rounded-b-4xl px-4 md:px-0 md:py-0">
         <div className="md:px-4">GlamEaze</div>
         <div className="flex gap-3 md:bg-primary md:gap-10 md:px-5 md:py-7 md:w-[80%] md:items-center md:justify-end md:text-white md:rounded-bl-[80px]">
-          <div className="hidden md:flex md:gap-10">
+          <div className="hidden lg:flex md:gap-10">
             {menuList.map((menu) => {
               return (
                 <li key={menu.id} className="list-none">
@@ -34,7 +34,7 @@ export const Header = () => {
             <IconShoppingCart stroke={1} />
           </div>
           <div
-            className="block md:hidden cursor-pointer"
+            className="block lg:hidden cursor-pointer"
             onClick={() => setIsSideBarOpen(true)}
           >
             <IconMenuDeep stroke={2} />

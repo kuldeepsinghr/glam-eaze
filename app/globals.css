@@ -1,10 +1,10 @@
 @import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
+  --background: #fee3e5;
   --foreground: #171717;
-  --primary: #f06a88;
-  --secondary: #c9372c;
+  --primary: #f0597c;
+  --secondary: #4d1c28;
 }
 
 @theme inline {
@@ -25,4 +25,8 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.clip-diagonal {
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
 }
