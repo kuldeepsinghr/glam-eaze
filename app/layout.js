@@ -8,6 +8,12 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
+const dancingScript = Dancing_Script({
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+  variable: '--font-dancing-script',
+});
+
 export const metadata = {
   title: {
     default: 'GlamEaze',
@@ -19,7 +25,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
+      <body className={`${inter.className} ${dancingScript.variable}`}>
         <Header />
         {children}
       </body>

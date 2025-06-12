@@ -25,3 +25,23 @@ export const menuList = [
     path: '/',
   },
 ];
+
+export const services = [
+  {
+    name: 'Hair Services',
+    image: '/Hair.png',
+  },
+
+  {
+    name: 'Skincare Services',
+    image: '/Skincare.png',
+  },
+  {
+    name: 'Makeup Services',
+    image: '/MAKEUP.png',
+  },
+  {
+    name: 'Mehandi Services',
+    image: '/Mehandi.png',
+  },
+];
