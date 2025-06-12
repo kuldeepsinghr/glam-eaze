@@ -68,3 +68,18 @@ export const chooseUs = [
     image: '/FlexibleSlots.png',
   },
 ];
+
+export const serviceFeature = [
+  {
+    name: 'Choose Your Service',
+    image: '/ChooseYour.png',
+  },
+  {
+    name: 'Pick a Time Slot',
+    image: '/FlexibleSlots.png',
+  },
+  {
+    name: 'Relax at Home',
+    image: '/RelaxAt.png',
+  },
+];
