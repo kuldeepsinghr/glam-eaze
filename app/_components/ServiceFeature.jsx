@@ -4,7 +4,7 @@ import React from 'react';
 
 export const ServiceFeature = () => {
   return (
-    <div className="my-10 flex flex-col items-center justify-center">
+    <div className="mt-10 flex flex-col items-center justify-center">
       {/* line*/}
       <div className="w-full h-[2px] my-6 bg-gradient-to-r from-transparent via-pink-500 to-transparent shadow-[0_0_12px_4px_white] lg:shadow-[0_0_12px_4px_#fee3e5] rounded-full" />
 

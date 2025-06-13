@@ -3,6 +3,7 @@ import React from 'react';
 import { Tag } from './Tag';
 import { ServiceFeature } from './ServiceFeature';
 import { Strip } from './Strip';
+import { AboutUs } from './AboutUs';
 
 export const AllAcross = () => {
   return (
@@ -33,6 +34,7 @@ export const AllAcross = () => {
           </div>
         </div>
         <ServiceFeature />
+        <AboutUs />
       </div>
       <Strip />
     </section>
