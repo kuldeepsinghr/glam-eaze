@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   IconMenuDeep,
   IconShoppingCart,
@@ -13,6 +13,17 @@ import Image from 'next/image';
 
 export const Header = () => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
+
+  // prevant scrolling to the top when the sidebar is opened
+  useEffect(() => {
+    if (isSideBarOpen) document.body.style.overflow = 'hidden';
+    else document.body.style.overflow = '';
+
+    // Clean up if component unmounts while sidebar is open
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isSideBarOpen]);
 
   return (
     <>
@@ -59,11 +70,11 @@ export const Header = () => {
       </header>
 
       {/* Overlay and Side bar for small screen */}
-      {isSideBarOpen && (
+      {
         <>
           {/* Overlay */}
           <div
-            className={`fixed inset-0 bg-black/30 z-[40] transition-opacity duration-300
+            className={`fixed inset-0 bg-black/85 z-[40] transition-opacity duration-300
               ${isSideBarOpen ? 'opacity-30 pointer-events-auto' : 'opacity-0 pointer-events-none'}
               `}
             onClick={() => setIsSideBarOpen(false)} // clicking overlay closes sidebar
@@ -71,7 +82,7 @@ export const Header = () => {
 
           {/* Sidebar */}
           <div
-            className={`fixed top-0 left-0 h-full w-[70%] bg-white text-black z-[50] flex flex-col gap-2 p-5 transition-all ease-in-out duration-300
+            className={`fixed top-0 left-0 h-full w-[70%] bg-white text-secondary font-semibold z-[50] flex flex-col gap-2 p-5 transition-all ease-in-out duration-300
               ${isSideBarOpen ? 'translate-x-0' : '-translate-x-full'}
             `}
           >
@@ -88,7 +99,7 @@ export const Header = () => {
             ))}
           </div>
         </>
-      )}
+      }
     </>
   );
 };
