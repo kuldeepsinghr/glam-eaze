@@ -1,7 +1,6 @@
 import { Dancing_Script, Inter } from 'next/font/google';
 import './globals.css';
 import { Header } from './_components/Header';
-
 const inter = Inter({
   weight: ['400', '500', '600', '700', '800'],
   subsets: ['latin'],
@@ -20,6 +19,27 @@ export const metadata = {
     template: '%s GlamEaze',
   },
   description: 'Providing the best sevices',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+    other: [
+      {
+        rel: 'icon',
+        url: '/favicon-32x32.png',
+        sizes: '32x32',
+      },
+      {
+        rel: 'icon',
+        url: '/favicon-16x16.png',
+        sizes: '16x16',
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+  },
 };
 
 export default function RootLayout({ children }) {

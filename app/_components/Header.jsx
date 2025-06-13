@@ -9,14 +9,30 @@ import {
 } from '@tabler/icons-react';
 import Link from 'next/link';
 import { menuList } from '@/utils/menuList';
+import Image from 'next/image';
 
 export const Header = () => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
 
   return (
     <>
-      <header className="flex fixed w-full z-50 py-6 justify-between lg:bg-background md:w-full items-center bg-primary md:bg-transparent md:text-secondary text-white rounded-b-4xl lg:rounded-none px-4 md:px-0 md:py-0">
-        <div className="md:px-4">GlamEaze</div>
+      <header className="flex fixed w-full z-50 py-6 justify-between md:bg-white lg:bg-background md:w-full items-center bg-primary md:text-secondary text-white rounded-b-4xl lg:rounded-none px-4 md:px-0 md:py-0">
+        <div className="md:px-4">
+          <Image
+            src="/Logo/Glameaze-07.png"
+            width={100}
+            height={30}
+            alt="logo"
+            className="block md:hidden"
+          />
+          <Image
+            src="/Logo/Glameaze-08.png"
+            width={150}
+            height={60}
+            alt="logo"
+            className="hidden md:block"
+          />
+        </div>
         <div className="flex gap-3 md:bg-primary md:gap-10 md:px-5 md:py-7 md:w-[80%] md:items-center md:justify-end md:text-white md:rounded-bl-[80px]">
           <div className="hidden lg:flex md:gap-10">
             {menuList.map((menu) => {
