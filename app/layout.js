@@ -1,6 +1,7 @@
 import { Dancing_Script, Inter } from 'next/font/google';
 import './globals.css';
 import { Header } from './_components/Header';
+import { Footer } from './_components/Footer';
 const inter = Inter({
   weight: ['400', '500', '600', '700', '800'],
   subsets: ['latin'],
@@ -48,6 +49,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className} ${dancingScript.variable}`}>
         <Header />
         <main className="pt-12">{children}</main>
+        <Footer />
       </body>
     </html>
   );
