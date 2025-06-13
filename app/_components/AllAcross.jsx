@@ -17,17 +17,19 @@ export const AllAcross = () => {
             alt="ahmedabad"
           />
 
-          <div className="text-center md:text-left text-secondary md:px-6">
-            <div className="max-w-lg md:max-w-none">
-              <h2 className="text-3xl font-semibold sm:text-3xl lg:text-5xl">
+          <div className="text-center flex flex-col items-center justify-center md:text-left text-secondary md:px-6">
+            <div className="max-w-lg md:max-w-none relative">
+              <h2 className="text-3xl font-semibold sm:text-3xl md:text-4xl lg:text-5xl">
                 Serving All Across
               </h2>
-              <Tag name="#Ahmedabad" />
-              <p className="mt-4">
-                From Gota, Maninagar and Bhopal to Navrangpura, SG Highway, and
-                Nikol we cover the entire city and surrounding areas.
-              </p>
+              <div className="absolute inset-8 rotate-6 top-[120%] left-[30%]">
+                <Tag name="#Ahmedabad" />
+              </div>
             </div>
+            <p className="mt-14 lg:mt-20">
+              From Gota, Maninagar and Bhopal to Navrangpura, SG Highway, and
+              Nikol we cover the entire city and surrounding areas.
+            </p>
           </div>
         </div>
         <ServiceFeature />
